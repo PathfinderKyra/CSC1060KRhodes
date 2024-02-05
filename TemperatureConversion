@@ -1,0 +1,23 @@
+// Importing the Scanner class from the readline-sync library
+const readline = require('readline-sync');
+
+// Function to convert Fahrenheit to Celsius
+function fahrenheitToCelsius(fahrenheit) {
+    return (fahrenheit - 32) * 5/9;
+}
+
+// Function to convert Fahrenheit to Kelvin
+function fahrenheitToKelvin(fahrenheit) {
+    return (fahrenheit - 32) * 5/9 + 273.15;
+}
+
+// Get user input for Fahrenheit temperature
+const fahrenheitInput = parseFloat(readline.question('Enter the temperature in Fahrenheit: '));
+
+// Convert Fahrenheit to Celsius and Kelvin using the functions
+const celsiusResult = fahrenheitToCelsius(fahrenheitInput);
+const kelvinResult = fahrenheitToKelvin(fahrenheitInput);
+
+// Display the results
+console.log(`\nTemperature in Celsius: ${celsiusResult.toFixed(2)}°C`);
+console.log(`Temperature in Kelvin: ${kelvinResult.toFixed(2)}K`);
